@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="amols.com.filterlist">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FindMYFood"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GroupActivity" />
+        <activity android:name=".Restaurant1" />
+        <activity android:name=".Restaurant2" />
+        <activity android:name=".NoRestaurant" />
+        <activity android:name=".YelpSearchActivity" />
+        <activity android:name=".SearchDetailsActivity" />
+        <activity android:name=".YelpSearchByLocationActivity" />
+        <activity android:name=".YelpSearchNearbyActivity" />
+        <activity android:name=".MapsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAr_MzOxnP243YHxlDGsnxjNZYwWL259HI" />
+
+        <activity android:name=".DatabaseActivity" />
+
+        <provider
+            android:name=".RestaurantProvider"
+            android:authorities="amols.com.filterlist.provider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MapLocationActivity" />
+        <activity android:name=".DisplayActivity" />
+        <activity android:name=".DisplayListActivity" />
+        <activity android:name=".DisplayBurgerListActivity" />
+        <activity android:name=".DisplayIndianActivity" />
+        <activity android:name=".DisplayThaiActivity" />
+        <activity android:name=".DisplayMexicanActivity"></activity>
+    </application>
+
+</manifest>
